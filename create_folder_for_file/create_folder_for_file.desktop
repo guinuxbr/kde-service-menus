@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+MimeType=application/octet-stream
+Actions=create_folder_for_file
+
+[Desktop Action create_folder_for_file]
+Name=Create Folder for File
+Icon=folder-new 
+Exec=$HOME/.local/share/kio/servicemenus/create_folder_for_file/create_folder_for_file.sh %u
