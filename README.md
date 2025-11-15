@@ -2,7 +2,7 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/guinuxbr/kde-service-menus)
 ![GitHub contributors](https://img.shields.io/github/contributors/guinuxbr/kde-service-menus)
-![GitHub stars](https://img.shields.io/github/stars/guinuxbr/kde-service-menus)
+![GitHub Repo stars](https://img.shields.io/github/stars/guinuxbr/kde-service-menus)
 ![GitHub forks](https://img.shields.io/github/forks/guinuxbr/kde-service-menus)
 ![Twitter Follow](https://img.shields.io/twitter/follow/guinuxbr?style=social)
 
