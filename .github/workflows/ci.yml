@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, development]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+  pull_request:
+    branches: [main, development]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck
+        run: |
+          shellcheck install.sh
+          shellcheck create_folder_for_file/create_folder_for_file.sh
+          shellcheck tests/test_service_menus.sh
+
+      - name: Run Test Suite
+        run: |
+          chmod +x tests/test_service_menus.sh
+          ./tests/test_service_menus.sh
