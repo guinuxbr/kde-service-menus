@@ -1,0 +1,16 @@
+# Temporary & backup files
+*~
+*.swp
+*.swo
+*.tmp
+
+# OS generated files
+.DS_Store
+.directory
+Thumbs.db
+
+# Test artifacts
+tests/tmp/
+
+# Rumdl
+.rumdl_cache/
